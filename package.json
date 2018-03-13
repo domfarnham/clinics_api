@@ -1,5 +1,5 @@
 {
-  "name": "clinics",
+  "name": "clinics_api",
   "version": "0.0.0",
   "description": "",
   "main": "server.js",
