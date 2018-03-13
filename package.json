@@ -1,0 +1,25 @@
+{
+  "name": "clinics",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "express": "~4.15.0",
+    "request": "^2.85.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "supertest": "^3.0.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "test:watch": "mocha --watch ./test ./"
+  },
+  "author": "Dom Farnham",
+  "license": "ISC"
+}
