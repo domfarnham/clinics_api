@@ -4,7 +4,6 @@ const express = require('express')
 const app = express()
 const clinics = require('./lib/clinics')
 
-
 // Routes
 app.use('/public', express.static(process.cwd() + '/public'))
 
