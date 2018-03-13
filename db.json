@@ -343,13 +343,8 @@
          },
          "latitude":"51.370185852050781",
          "is_pims_managed":"True",
-         "fax":"",
-         "email":"",
-         "county":"",
          "city":"Croydon",
-         "address3":"",
-         "address2":"113 High Street",
-         "address1":""
+         "address2":"113 High Street"
       }
    ]
 }
