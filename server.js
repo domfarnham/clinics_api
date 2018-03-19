@@ -3,6 +3,7 @@
 const express = require('express')
 const app = express()
 const clinics = require('./lib/clinics')
+const port = process.env.PORT || 3000
 
 // Routes
 app.use('/public', express.static(process.cwd() + '/public'))
@@ -26,8 +27,8 @@ app.use(function (err, req, res, next) {
   }
 })
 
-const server = app.listen(3000, function () {
-  console.log('Node.js listening on port ' + 3000)
+const server = app.listen(port, function () {
+  console.log('Node.js listening on port ' + port)
 })
 
 module.exports = server
