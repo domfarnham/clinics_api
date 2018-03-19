@@ -1,4 +1,4 @@
-Clincs API
+Clinics API
 ======
 An example of a Node.js Microservice which provides an endpoint for searching for clinics by postcode.
 
