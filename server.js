@@ -8,6 +8,10 @@ const port = process.env.PORT || 3000
 // Routes
 app.use('/public', express.static(process.cwd() + '/public'))
 
+app.get('/', function (req, res, next) {
+  res.sendFile(process.cwd() + '/views/index.html')
+})
+
 app.get('/clinics/postcode/:postcode', clinics.findWithPostCode)
 
 app.get('/clinics/city/:name', clinics.findWithCityName)

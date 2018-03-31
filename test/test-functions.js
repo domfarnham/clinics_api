@@ -4,7 +4,7 @@ const findWithPostCode = require('../lib/clinics').findWithPostCode
 
 describe('clinics', () => {
   describe('findWithPostCode', function () {
-    it('should return the results JSON', function () {
+    it('should return JSON', function () {
       expect()
     })
   })

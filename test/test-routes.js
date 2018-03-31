@@ -9,6 +9,11 @@ describe('routes', function () {
   afterEach(function () {
     server.close()
   })
+  it('should respond to /', function testHomePage (done) {
+    request(server)
+      .get('/')
+      .expect(200, done)
+  })
   it('should respond to /clinics/postcode/:postcode', function testPostCode (done) {
     request(server)
       .get('/clinics/postcode/SW11 4LU')

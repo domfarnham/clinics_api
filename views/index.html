@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<htmnl>
+
+  <head>
+    <title>Clinics API</title>
+    <link href="/public/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Clinics API</h1>
+      <p>
+         An example of a Node.js Microservice which provides an endpoint for searching for clinics by postcode.
+      </p>
+      <p>
+         It also provides an endpoint which responds with a list of partial postcodes within the city and the number of clinics within
+        the postcode.
+      </p>
+      <h4>
+        Endpoints
+      </h4>
+      <p class="lead">
+        /clinics/postcode/:postcode
+      </p>
+      <p>
+        This endpoint accepts a UK postcode, such as CR9 1PJ.
+      </p>
+      <p>
+        Here is an example URL that calls the API endpoint:
+      </p>
+      <p>
+        <a href="https://clinics-api.herokuapp.com/clinics/postcode/cr91pj">https://clinics-api.herokuapp.com/clinics/postcode/cr91pj</a>
+      </p>
+      <p>
+        It provides a JSON response with results that match the full postcode only:
+      </p>
+      <p>
+        Example output:
+      </p>
+      <pre><code>
+      { 
+          "results" : [ 
+              { 
+                "organisation_id" : "58961", 
+                "name" : "Edridge Road Community Health Centre" 
+              }, 
+              { 
+                "organisation_id" : "77668", 
+                "name" : "Edridge Road Walk-In Centre" 
+              } 
+          ] 
+      }
+      </code></pre>
+      <p class="lead">
+         /clinics/city/:name
+      </p>
+      <p>
+         The second endpoint accepts the name of a city such as Croydon.
+      </p>
+      <p>
+        Here is an example URL that calls the API endpoint:
+      </p>
+      <p>
+        <a href="https://clinics-api.herokuapp.com/clinics/city/croydon">https://clinics-api.herokuapp.com/clinics/city/croydon</a>
+      </p>
+      <p>
+         It provides a JSON response with a results object that contains all of the partial postcodes found and how many of them
+        where found.
+      </p>
+      <p>
+        Example output:
+      </p>
+      <pre><code>
+      { 
+          "results" : { 
+              { 
+                "CR9" : 2, 
+                "CR0" : 8
+              }
+          } 
+      }
+      </code></pre>
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Clinics API by
+            <a href="https://github.com/domfarnham">Dom Farnham </a>
+            <a href="https://twitter.com/jscodebook">@jscodebook.</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+
+</html>
